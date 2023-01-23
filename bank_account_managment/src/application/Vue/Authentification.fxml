@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.AuthentificationController">
+   <children>
+      <BorderPane prefHeight="324.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Authentifcation" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <VBox prefHeight="167.0" prefWidth="420.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="399.0" text="Login" textAlignment="CENTER">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Login" />
+                  <Label text="Mot de passe">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="mdp" />
+                  <Label fx:id="OUTPUT" prefHeight="17.0" prefWidth="415.0" />
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox prefHeight="29.0" prefWidth="420.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="cnx" mnemonicParsing="false" onAction="#On_connexion" prefHeight="25.0" prefWidth="215.0" text="Connexion" />
+                  <Button fx:id="clear" mnemonicParsing="false" onAction="#On_Clear" prefHeight="25.0" prefWidth="217.0" text="Annuller" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

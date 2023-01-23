@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.GestionClientController">
+   <children>
+      <BorderPane layoutY="-77.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="400.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Numero Client" />
+                  <TextField fx:id="NumClt" />
+                  <Label text="Nom" />
+                  <TextField fx:id="Nom" />
+                  <Label text="Prenom" />
+                  <TextField fx:id="Prenom" />
+                  <Label text="Adresse" />
+                  <TextField fx:id="Adress" />
+                  <Label layoutX="10.0" layoutY="27.0" text="Date Naissance" />
+                  <TextField fx:id="DN" />
+                  <Label layoutX="10.0" layoutY="61.0" text="Email" />
+                  <TextField fx:id="Email" />
+                  <Label layoutX="10.0" layoutY="78.0" text="Numero Telephone" />
+                  <TextField fx:id="NumTel" />
+                  <Label text="Mot de passe" />
+                  <PasswordField fx:id="Pass" />
+                  <Label text="Confirmer mot de passe" />
+                  <PasswordField fx:id="Pass2" />
+                  <Label fx:id="err" text=".........." />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <Label text="Gestion Cllient" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TableView fx:id="tyClient" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colNumClient" prefWidth="75.0" text="NumClient" />
+                  <TableColumn fx:id="colNom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="colPrenom" prefWidth="75.0" text="Prenom" />
+                  <TableColumn fx:id="colAdress" prefWidth="75.0" text="Adresse" />
+                  <TableColumn fx:id="colDN" prefWidth="104.0" text="Date Naissance" />
+                  <TableColumn fx:id="colEmail" prefWidth="101.0" text="Email" />
+                  <TableColumn fx:id="colNumTel" prefWidth="79.0" text="Num Tel" />
+                  <TableColumn fx:id="colMADP" prefWidth="79.0" text="MDP" />
+              </columns>
+            </TableView>
+         </center>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Save" prefHeight="25.0" prefWidth="104.0" text="Enregistrer" />
+                  <Button mnemonicParsing="false" onAction="#Update" prefHeight="25.0" prefWidth="100.0" text="Modifier" />
+                  <Button mnemonicParsing="false" onAction="#Delete" prefHeight="25.0" prefWidth="211.0" text="Supprimer" />
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#Retour" text="Retour" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

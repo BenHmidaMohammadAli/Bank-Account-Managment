@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.DashboardClientController">
+   <children>
+      <BorderPane layoutX="153.0" layoutY="77.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Dashboard Client" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <VBox prefHeight="383.0" prefWidth="183.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ConsulteCompte" prefHeight="76.6" prefWidth="183.0" text="Consulter Compte" />
+                  <Button mnemonicParsing="false" onAction="#ModifierCompte" prefHeight="76.6" prefWidth="183.0" text="Modifier Compte" />
+                  <Button mnemonicParsing="false" onAction="#DemandeCarnet" prefHeight="76.6" prefWidth="183.0" text="Demande un carnet de cheque" />
+                  <Button mnemonicParsing="false" onAction="#AddReclamation" prefHeight="76.6" prefWidth="183.0" text="Ajouter une reclamation" />
+                  <Button mnemonicParsing="false" onAction="#ConsulterOperation" prefHeight="76.6" prefWidth="194.0" text="Consulter les operations" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="NBCompte" mnemonicParsing="false" text="Nombre de Compte" />
+                  <Button fx:id="NBOp" mnemonicParsing="false" text="Nombre d'operation" />
+                  <Button fx:id="NBRec" mnemonicParsing="false" text="Nombre de reclamation" />
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#Deconnection" text="Deconnection" />
+              </buttons>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
